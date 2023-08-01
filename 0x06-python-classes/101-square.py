@@ -112,5 +112,5 @@ class Square:
         else:
             sq_str.extend([""] * self.__position[1])
             sq_str.extend([" " * self.__position[0] + '#' * self.__size
-                for _ in range(self.__size)])
+                           for _ in range(self.__size)])
         return "\n".join(sq_str)
