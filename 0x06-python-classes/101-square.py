@@ -99,6 +99,7 @@ class Square:
                 print()
             for itr in range(self.__size):
                 print(" " * self.__position[0] + '#' * self.__size)
+
     def __str__(self):
         """ This returns the square string representation
 
