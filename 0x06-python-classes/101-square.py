@@ -106,13 +106,11 @@ class Square:
         Returns:
             str: The square string representation with the '#' character
         """
-        sq_str = ""
+        sq_str = []
         if self.__size == 0:
-            sq_str = sq_str + "\n"
+            sq_str.append("")
         else:
-            for y in range(self.__position[1]):
-                sq_str = sq_str + "\n"
-            for count in range(self.__size):
-                sq_str = sq_str + " " * self.__position[0] + '#' * self.__size
-                + "\n"
-        return sq_str.strip()
+            sq_str.extend([""] * self.__position[1])
+            sq_str.extend([" " * self.__position[0] + '#' * self.__size
+                for _ in range(self.__size)])
+        return "\n".join(sq_str)
