@@ -20,7 +20,6 @@ class Square:
             TypeError: If the given size is not an integer
             ValueError: If the given size is < 0
         """
-        self.__size = 0
         self.size = size
 
     @property
@@ -57,7 +56,7 @@ class Square:
         """
         return self.__size ** 2
 
-    def __opeq__(self, other):
+    def __eq__(self, other):
         """
         equality opeartor for the square area instances
 
@@ -69,7 +68,7 @@ class Square:
         """
         return self.area() == other.area()
 
-    def __opne__(self, other):
+    def __ne__(self, other):
         """
         inequality opeartor for the square area instances
 
@@ -81,7 +80,7 @@ class Square:
         """
         return self.area() != other.area()
 
-    def __opg__(self, other):
+    def __gt__(self, other):
         """
         greater than opeartor for the square area instances
 
@@ -94,7 +93,7 @@ class Square:
         """
         return self.area() > other.area()
 
-    def __opge__(self, other):
+    def __ge__(self, other):
         """
         greater than or equal to 0 opeartor for the square area instances
 
@@ -107,7 +106,7 @@ class Square:
         """
         return self.area() >= other.area()
 
-    def __opl__(self, other):
+    def __lt__(self, other):
         """
         less than opeartor for the square area instances
 
@@ -120,7 +119,7 @@ class Square:
         """
         return self.area() < other.area()
 
-    def __ople__(self, other):
+    def __le__(self, other):
         """
         less than or equal to 0 opeartor for the square area instances
 
