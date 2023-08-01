@@ -20,7 +20,6 @@ class Square:
             TypeError: If the given size is not an integer
             ValueError: If the given size is < 0
         """
-        self.__size = 0
         self.size = size
 
     @property
