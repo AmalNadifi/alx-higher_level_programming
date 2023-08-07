@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Definition of a module to print first and last name """
 
+
 def say_my_name(first_name, last_name=""):
     """ Printing first and last name
 
@@ -19,6 +20,6 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
-    
+
     full_name = "My name is {} {}".format(first_name, last_name)
     print(full_name)
