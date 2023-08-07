@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def add_integers(a, b=98):
+def add_integer(a, b=98):
     """ Definition of a function adding 2 integers
 
     Args:
