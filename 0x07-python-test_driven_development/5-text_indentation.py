@@ -22,3 +22,5 @@ def text_indentation(text):
     for delimiter in ".:?":
         text = (delimiter + "\n\n").join(
                 [sentence.strip(" ") for sentence in text.split(delimiter)])
+
+    print(text)
