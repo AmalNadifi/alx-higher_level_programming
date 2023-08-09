@@ -1,0 +1,65 @@
+=====================The ''2-matrix_divided'' module================
+=================================================================
+Using ''matrix_divided''
+
+--------------------
+
+Import the function:
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Let's test the function with all possible scenarios:
+
+1- Testing with valid matrix and divisor:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+	[[0.33, 0.67, 1.0]], [1.33, 1.67, 2.0]]
+
+2- Testing with invalid matrix with strings:
+	>>> matrix_divided([["Hey", "Amelie"], [18, 19]], 4)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+3- Testing with uneven size of rows in the matrix:
+	>>> matrix_divided([[1, 2, 3], [4, 5]], 2)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+4- Testing with a non valid div:
+	>>> matrix_divided([[18, 19], [16, 20]], "Hi")
+	Traceback (most recent call last):
+	TypeError: div must be a number
+
+5- Testing with a non valid matrix:
+	>>> matrix_divided("Hi", 20)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+6- Testing with a zero as divisor:
+	>>> matrix_divided([[18, 19], [16, 20]], 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+7- Testing with negative int and float div:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], -3)
+	 [[-0.33, -0.67, -1.0]], [-1.33, -1.67, -2.0]]
+
+8- Testing with infinity as div:
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+9- Testing with no div argument:
+	>>> matrix_divided([[18, 19]])
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+10- Testing with no arguments:
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+11- Testing if the matrix_divided function alters the input matrix:
+	>>> matrix = [[18, 19]]
+	>>> matrix_divided(matrix, 3)
+	[[6.0, 6.33]]
+	>>> print(matrix)
+	[[18, 19]]
