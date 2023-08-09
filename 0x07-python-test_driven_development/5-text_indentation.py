@@ -20,7 +20,7 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     for delimiter in ".:?":
-        text = (delimiter + "\n\n").join(
+        text = (delimiter + "\n").join(
                 [sentence.strip(" ") for sentence in text.split(delimiter)])
 
     print(text)
