@@ -5,6 +5,7 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """ Test scenarios to evaluate the 'max_integer' function"""
 
@@ -60,13 +61,14 @@ class TestMaxInteger(unittest.TestCase):
         """ Test with a non iterable args """
         self.assertRaises(TypeError, lambda: max_integer(49))
 
-    def t_multi(self)
+    def t_multi(self):
         """ Test with a multitude of arguments"""
         self.assertRaises(TypeError, lambda: max_integer([19], [18]))
 
     def t_string(self):
         """ Test function on The string """
         self.assertEqual(max_integer("Python"), 'y')
-    
+
+
 if __name__ == '__main__':
     unittest.main()
