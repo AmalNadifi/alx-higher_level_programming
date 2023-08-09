@@ -8,4 +8,56 @@ Import the function:
 
 	>>> text_indentation = __import__('5-text_indentation').text_indentation
 
+------------------------------------------------------------------------------
 
+Let's test the function with all possible scenarios:
+
+1- Testing empty string as argument:
+	>>> text_indentation("")
+
+
+2- Testing a non string argument:
+	>>> text_indentation(19)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+3- Testing a simple string:
+	>>> text_indentation("Test argument. Let's see how it does work!")
+	Test argument.
+	<BLANKLINE>
+	Let's see how it does work!
+
+4- Testing with spaces at the beginning of the argument:
+	>>> text_indentation("   Another test argument. Let's see how it works!!")
+	Another test argument.
+	<BLANKLINE>
+	Let's see how it works!!
+
+5- testing with spaces at the end of the argument:
+	>>> text_indentation("Case of spaces at the end!     ")
+	Case of spaces at the end!
+	<BLANKLINE>
+
+6- Testing with multiple delimiters in the text:
+	>>> text_indentation(".:.? Case of multiple punctuation marks?:.?")
+	.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+	Case of multiple punctuation marks?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	?
+	<BLANKLINE>
+
+7- Testing with spaces at the start, middle or the end of the given text:
+	>>> text_indentation("     Multiple spaces   in   this   sentence.      ")
+	Multiple spaces   in   this   sentence.
+	<BLANKLINE>
