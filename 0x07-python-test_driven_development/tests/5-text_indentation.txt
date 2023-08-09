@@ -1,0 +1,11 @@
+----------------------------The ''5-text_indentation'' module-----------------
+
+In order to ensure the functionality of the 'text_indentation' function, the subsequent scenarios were designed:
+
+------------------------------------------------------------------------------
+
+Import the function:
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
