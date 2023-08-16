@@ -17,7 +17,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """ the public method retrieves a dictionary representation
         of a Student instance """
         if (type(attrs) == list and
