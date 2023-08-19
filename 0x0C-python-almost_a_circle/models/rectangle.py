@@ -88,3 +88,10 @@ class Rectangle(Base):
         """ This method prints the Rectangle with '#' chacarters """
         for itr in range(self.__height):
             print('#' * self.__width)
+
+    def __str__(self):
+        """ This function returns the print(( and str() representation
+        of the rectangle
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.__width, self.__height)
