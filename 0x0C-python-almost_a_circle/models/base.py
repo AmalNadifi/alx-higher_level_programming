@@ -10,12 +10,13 @@ class Base:
     in project 0x0C Python
 
     Attributes:
-        __no__objects (int): How many instantiated bases """
+        __no__objects (int): How many instantiated bases
+    """
+    __nb_objects = 0
 
-        __nb_objects = 0
-
-        def __init__(self, id=None):
+    def __init__(self, id=None):
         """ Initialization of a new Base
+
         Args:
             id (int) : The new Base identity
         """
