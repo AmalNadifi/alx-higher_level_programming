@@ -85,9 +85,13 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """ This method prints the Rectangle with '#' chacarters """
+        """ This method prints the Rectangle with '#' chacarters
+        considering the x and y positions
+        """
+        for ctr in range(self.y):
+            print()
         for itr in range(self.__height):
-            print('#' * self.__width)
+            print(" " * self.x + '#' * self.__width)
 
     def __str__(self):
         """ This function returns the print(( and str() representation
