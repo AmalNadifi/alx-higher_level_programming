@@ -55,3 +55,12 @@ class Square(Rectangle):
             self.y = args[3]
         except IndexError:
             pass
+
+    def to_dictionary(self):
+        """ This is the method representing the rectangle """
+        return {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'size': self.size
+                }
