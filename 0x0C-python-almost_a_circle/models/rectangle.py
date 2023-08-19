@@ -99,3 +99,25 @@ class Rectangle(Base):
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
                 self.id, self.x, self.y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """ This method updates the attributes using the no keyword
+        and key worded arguments
+
+        Args:
+            *args: The variable number of the arguments in the order
+                id, width, height, x, y
+            **kwargss: The key worded arguments to update the attributes
+        """
+        if len(args) == 0:
+            for attr, val in kwargs.items():
+                self.__setattr__(attr, val)
+            return
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
