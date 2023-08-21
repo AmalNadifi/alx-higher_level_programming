@@ -98,7 +98,7 @@ class Base:
             with open(filename, mode="r", encoding="utf-8") as file:
                 json_string = file.read()
                 json_list = cls.from_json_string(json_string)
-                instances = [cls.create(**dict_item) for dict_item in json_list]
+                instances = [cls.create(**item) for item in json_list]
                 return instances
         except FileNotFoundError:
-                return []
+            return []
