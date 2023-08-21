@@ -131,3 +131,8 @@ class Rectangle(Base):
                 'height': self.height,
                 'width': self.width
                 }
+
+    def to_csv_row(self):
+        """ This method returns the attributes as a list
+        of CSV serialization """
+        return [self.id, self.width, self.height, self.x, self.y]

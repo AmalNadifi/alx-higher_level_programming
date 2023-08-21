@@ -151,6 +151,6 @@ class Base:
                                 int(row[0])
                                 )
                     instances.append(instance)
-            return instances
+                return instances
         except FileNotFoundError:
             return []
