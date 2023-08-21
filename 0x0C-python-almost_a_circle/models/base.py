@@ -95,10 +95,10 @@ class Base:
         """
         filename = cls.__name__ + ".json"
         try:
-            with open(filename, mode="r", encodeing="utf-8") as file:
+            with open(filename, mode="r", encoding="utf-8") as file:
                 json_string = file.read()
                 json_list = cls.from_json_string(json_string)
-                isntances = [cls.create(**dict_item) for dict_item in json_list]
+                instances = [cls.create(**dict_item) for dict_item in json_list]
                 return instances
-            except FileNotFoundError:
+        except FileNotFoundError:
                 return []
