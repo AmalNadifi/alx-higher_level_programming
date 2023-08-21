@@ -83,7 +83,7 @@ class Base:
         """
         if cls.__name__ == "Rectangle":
             instance = cls(1, 1)
-        elif sls.__name__ == "Square":
+        elif cls.__name__ == "Square":
             instance = cls(1)
         instance.update(**dictionary)
         return instance
