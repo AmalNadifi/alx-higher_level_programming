@@ -27,7 +27,6 @@ if __name__ == "__main__":
     # Query the database for the State obj containing a
     state_instance = session.query(State).filter(State.name.contains('a'))
 
-    # Checking if an instance is found and print its details
-    if state_instance is not None:
-        for state_inst in state_instance:
-            print(state_instance.id, state_instance.name, sep=": ")
+    # Iterating and printing the matching State objects with a
+    for state_inst in state_instance:
+        print(state_inst.id, state_inst.name, sep=": ")
