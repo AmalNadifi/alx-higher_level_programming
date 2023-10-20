@@ -25,7 +25,10 @@ if __name__ == "__main__":
     session = Session()
 
     # Query the database for the first State obj
-    if instance is None:
+    state_instance = session.query(State).order_by(State.id).first()
+
+    # Checking if an instance is found and print its details
+    if state_instance is None:
         print("Nothing")
     else:
-        print(instance.id, instance.name, sep=": ")
+        print(state_instance.id, state_instance.name, sep=": ")
