@@ -24,10 +24,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Query the database for the first State obj
+    # Query the database for the State obj containing a
     state_instance = session.query(State).filter(State.name.contains('a'))
 
     # Checking if an instance is found and print its details
     if state_instance is not None:
-        for state_instance in states:
+        for state_inst in state_instance:
             print(state_instance.id, state_instance.name, sep=": ")
