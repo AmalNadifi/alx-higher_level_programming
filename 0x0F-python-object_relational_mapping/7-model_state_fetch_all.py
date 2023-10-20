@@ -14,8 +14,8 @@ if __name__ == "__main__":
     """
 
     # Creating a database engine based on the command line arguments
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                        .format(sys.argv[1], sys.argv[2], sys.argv[3]))
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+                          sys.argv[1], sys.argv[2], sys.argv[3]))
 
     # Create tables defined in model_state using SQLAlchemy Base class
     Base.metadata.create_all(engine)
