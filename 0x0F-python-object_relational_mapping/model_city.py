@@ -5,7 +5,7 @@ a Base class for utilizing the SQLAlchemy ORM.
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy import Base, State
+from model_state import Base, State
 
 
 class City(Base):
