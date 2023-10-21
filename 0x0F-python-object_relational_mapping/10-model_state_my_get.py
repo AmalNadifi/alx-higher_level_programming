@@ -32,10 +32,10 @@ if __name__ == "__main__":
 
     # Query the database for the State obj with the provided name
     state_instance = session.query(State).filter(
-                            State.name == (sys.argv[4]).first()
+                            State.name == (sys.argv[4]).first())
 
     # Checking if a matching state was found and print its ID
     if state_instance is not None:
-        print('{0}'.format(state_instance.id)
+        print('{0}'.format(state_instance.id))
     else:
         print("Not found")
