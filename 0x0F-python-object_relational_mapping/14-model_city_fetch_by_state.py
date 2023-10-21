@@ -6,7 +6,7 @@ import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
-from mosel_city import City
+from model_city import City
 
 
 if __name__ == "__main__":
