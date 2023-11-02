@@ -4,4 +4,4 @@
 # The requirements:
 #	The size must be displayed in bytes
 #	Use of curl is required
-curl -s "$1" | wc -c
+curl -s "$1" | grep -i Content-Length | cut -d " " -f2
