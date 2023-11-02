@@ -4,6 +4,17 @@ finds a peak in a list of unsorted integers """
 
 
 def find_peak(list_of_integers):
+    """
+    This method Finds a peak element in an unsorted list of integers
+
+    Args:
+        list_of_integers (list): The list of integers
+
+    Returns:
+        int or None: The peak element found in the list,
+                    or None if the list is empty.
+    """
+
     # Checking if the list is empty
     if not list_of_integers or list_of_integers == []:
         return None
