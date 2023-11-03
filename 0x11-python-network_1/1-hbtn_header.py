@@ -14,6 +14,6 @@ if __name__ == "__main__":
     with urllib.request.urlopen(request_obj) as response:
         # Extracting the headers from the response
         header = dict(resp.headers)
-        
+
         # Printing the value of the 'X-Request-Id' header
         print(header.get("X-Request-Id"))
