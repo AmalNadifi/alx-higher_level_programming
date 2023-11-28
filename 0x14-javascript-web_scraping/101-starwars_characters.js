@@ -14,9 +14,9 @@ const prequest = util.promisify(request);
 
     // Function to retrieve and log character names
     for (const charURL of filmData.characters) {
-        const characterData = (await prequest(charURL, { json: true })).body;
-        console.log(characterData.name);
-      } 
+      const characterData = (await prequest(charURL, { json: true })).body;
+      console.log(characterData.name);
+    }
   } catch (errorFilm) {
     console.error(errorFilm);
   }
