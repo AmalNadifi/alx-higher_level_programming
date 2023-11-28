@@ -11,7 +11,7 @@ const prequest = util.promisify(request);
 (async () => {
   try {
     const filmData = (await prequest(filmApiUrl, { json: true })).body;
-    
+
     // Function to retrieve and log character names
     const logCharacterName = async (charURL) => {
       try {
