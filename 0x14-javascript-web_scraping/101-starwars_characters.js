@@ -13,17 +13,10 @@ const prequest = util.promisify(request);
     const filmData = (await prequest(filmApiUrl, { json: true })).body;
 
     // Function to retrieve and log character names
-    const logCharacterName = async (charURL) => {
-      try {
+    for (const charURL of filmData.characters) {
         const characterData = (await prequest(charURL, { json: true })).body;
         console.log(characterData.name);
-      } catch (errorChar) {
-        console.error(errorChar);
-      }
-    };
-
-    // Log names of characters asynchronously
-    await Promise.all(filmData.characters.map(logCharacterName));
+      } 
   } catch (errorFilm) {
     console.error(errorFilm);
   }
